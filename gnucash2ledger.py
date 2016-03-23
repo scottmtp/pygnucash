@@ -72,8 +72,8 @@ for trans in transactions:
 		# Ensure 2 spaces after account name
 		out.write("\t%-40s  " % full_acc_name(split.account))
 		if split.account.commodity != trans.currency:
-			out.write("%10.2f %s @@ %.2f %s" % (split.quantity, format_commodity(split.account.commodity), abs(split.value), format_commodity(trans.currency)))
+			out.write("%10.4f %s @@ %.4f %s" % (split.quantity, format_commodity(split.account.commodity), abs(split.value), format_commodity(trans.currency)))
 		else:
-			out.write("%10.2f %s" % (split.value, format_commodity(trans.currency)))
+			out.write("%10.4f %s" % (split.value, format_commodity(trans.currency)))
 		out.write("\n")
 	out.write("\n")

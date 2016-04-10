@@ -33,7 +33,7 @@ for commodity in commodities:
 		continue
 	out.write("commodity %s\n" % format_commodity(commodity))
 	if commodity.fullname != "":
-		out.write("\tnote %s\n" % commodity.fullname)
+		out.write("\tnote %s: %s\n" % (commodity.namespace, commodity.fullname))
 out.write("\n")
 
 accounts = data.accounts.values()
